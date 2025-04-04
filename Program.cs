@@ -19,7 +19,8 @@ class Program
 
         DBHelper db = new(connectionString);
 
-        // PrintEngine.PrintWelcomeMessage();
+        PrintEngine.PrintWelcomeMessage();
+        CodingTrackerUtils.PauseApp();
     }
 
 }
