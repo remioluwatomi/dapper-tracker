@@ -21,6 +21,7 @@ public static class PrintEngine
         2. ENTER '2' to Update the session Start time and End Time
         3. ENTER '3' to update all values in the coding session
     ";
+    
 
     public static void PrintWelcomeMessage()
     {
@@ -31,6 +32,7 @@ public static class PrintEngine
 
         AnsiConsole.MarkupLine("\n[bold cyan]Hello, Coder![/][underline blue]Track Your Coding Journey![/]");
     }
+
 
     private static void EnginePanel(string header, string content)
     {
@@ -66,15 +68,18 @@ public static class PrintEngine
         AnsiConsole.Write(table);
     }
 
+
     public static void PrintDateTimePrompt(string prompt, string format)
     {
         AnsiConsole.MarkupLine($"[bold yellow]{prompt}[/] {format}");
     }
 
+
     public static void PrintMainMenuRequest()
     {
         AnsiConsole.MarkupLine("To go back to the main menu, simply enter [bold red]0[/].");
     }
+
 
     public static void PrintSuccessMessage(string successMessage)
     {
