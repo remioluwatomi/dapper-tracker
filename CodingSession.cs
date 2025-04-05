@@ -1,3 +1,6 @@
+
+
+
 public class CodingSession
 {
     public int? Id { get; }
@@ -18,5 +21,18 @@ public class CodingSession
         Date = date;
         StartTime = startTime;
         EndTime = endTime;
+    }
+
+    public CodingSession(long Id, string Date, string StartTime, string EndTime)
+    {
+        this.Id = (int)Id;
+        this.Date = CodingTrackerUtils.ParseSessionDateTime(Date);
+        this.StartTime = CodingTrackerUtils.ParseSessionDateTime(StartTime);
+        this.EndTime = CodingTrackerUtils.ParseSessionDateTime(EndTime);
+    }
+
+    public TimeSpan Duration()
+    {
+        return EndTime - StartTime;
     }
 }
